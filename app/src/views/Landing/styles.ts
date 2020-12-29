@@ -20,6 +20,7 @@ export default StyleSheet.create({
 		paddingHorizontal: 30,
 	},
 	logo: {
+		borderRadius: 50,
 		width: height_logo,
 		height: height_logo,
 	},
@@ -37,7 +38,7 @@ export default StyleSheet.create({
 		marginTop: 30,
 	},
 	signIn: {
-		width: 150,
+		width: 180,
 		height: 40,
 		justifyContent: 'center',
 		alignItems: 'center',

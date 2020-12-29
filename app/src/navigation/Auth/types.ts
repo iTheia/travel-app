@@ -4,6 +4,7 @@ import { RouteProp } from '@react-navigation/core';
 export type AuthParamList = {
 	Login: undefined;
 	Register: undefined;
+	OnBoarding: undefined;
 	Landing: undefined;
 };
 

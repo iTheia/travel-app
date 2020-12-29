@@ -90,12 +90,12 @@ export const AuthProvider: React.FC = ({ children }) => {
 	};
 	useEffect(() => {
 		setIsLoading(true);
-		setCurrentUser({
+		/* setCurrentUser({
 			avatar: '',
 			role: 'expert',
 			username: 'asd',
 			id: 1,
-		});
+		}); */
 		setIsLoading(false);
 	}, [setIsLoading]);
 	return (
