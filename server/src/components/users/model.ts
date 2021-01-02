@@ -16,6 +16,9 @@ export class User extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
+    @Column({ nullable: true, default: "tester" })
+    name: string;
+
     @Column({ nullable: true, default: 1 })
     avatar_id: number;
 
