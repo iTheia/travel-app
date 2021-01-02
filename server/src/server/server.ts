@@ -1,20 +1,20 @@
-import http from 'http';
-import { Application } from 'express';
+import http from "http";
+import { Application } from "express";
 
 export default class Server {
-	public app: Application;
-	public server: http.Server;
+    public app: Application;
+    public server: http.Server;
 
-	constructor(app: Application) {
-		this.server = http.createServer(app);
-		this.app = app;
-	}
+    constructor(app: Application) {
+        this.server = http.createServer(app);
+        this.app = app;
+    }
 
-	async connectDb(callback: Function, options?: Object) {
-		await callback(options);
-	}
+    async connectDb(callback: Function, options?: Object) {
+        await callback(options);
+    }
 
-	start(port: number) {
-		this.server.listen(port);
-	}
+    start(port: number) {
+        this.server.listen(port);
+    }
 }
