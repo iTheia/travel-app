@@ -13,6 +13,18 @@
         "noImplicitAny": false,
         "sourceMap": true
     },
-    "include": ["src"],
+    "include": [
+        "src",
+        "index.ts",
+        "http",
+        "routes",
+        "middlewares",
+        "config",
+        "components",
+        "components/middlewares",
+        "config",
+        "components",
+        "**/**/*.ts"
+    ],
     "exclude": ["node_modules", "build"]
 }

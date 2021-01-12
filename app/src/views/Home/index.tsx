@@ -1,50 +1,29 @@
-import React, { useState } from 'react';
-import { View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import { sample } from '../../constant';
-import Header from './Header';
-import Recent from './Recent';
-import { List } from '../../components/List';
+import React from "react";
+import { View } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import Header from "./Header";
+import Recent from "./Recent";
+import { List } from "../../components/Carrousel";
+import { useGet } from "../../hooks/useGet";
 
 export const HomeView: React.FC = () => {
-	const [gallery, setgallery] = useState([
-		{
-			image:
-				'https://images.pexels.com/photos/672358/pexels-photo-672358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940%27',
+    const { loading, data } = useGet("posts/getTrending", []);
 
-			title: 'Switzerland',
-			key: '1',
-		},
-		{
-			image:
-				'http://images.pexels.com/photos/672355/pexels-photo-672355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940%27',
-
-			title: 'New Zeland',
-			key: '2',
-		},
-		{
-			image:
-				'http://images.pexels.com/photos/672355/pexels-photo-672355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940%27',
-
-			title: 'New Zeland',
-			key: '3',
-		},
-		{
-			image:
-				'http://images.pexels.com/photos/672355/pexels-photo-672355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940%27',
-
-			title: 'New Zeland',
-			key: '4',
-		},
-	]);
-
-	return (
-		<View style={{ flexGrow: 1, height: '100%' }}>
-			<Header />
-			<ScrollView>
-				<List list={gallery} text="Tendencias" />
-				<Recent />
-			</ScrollView>
-		</View>
-	);
+    if (loading) {
+        return (
+            <View style={{ flexGrow: 1, height: "100%" }}>
+                <Header />
+            </View>
+        );
+    }
+    console.log(data);
+    return (
+        <View style={{ flexGrow: 1, height: "100%" }}>
+            <Header />
+            <ScrollView>
+                <List list={data} text='Tendencias' />
+                <Recent />
+            </ScrollView>
+        </View>
+    );
 };

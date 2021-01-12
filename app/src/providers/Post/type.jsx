@@ -1,6 +1,6 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
 export const PostContext = createContext({
-	post: {},
-	related: [],
+    post: {},
+    related: [],
 });

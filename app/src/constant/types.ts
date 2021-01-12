@@ -1,20 +1,20 @@
 export interface IUser {
-	role: string;
-	avatar: string;
-	username: string;
-	id: number;
+    role: string;
+    avatar: string;
+    username: string;
+    id: number;
 }
 
 export interface IPost {
-	_id: number;
-	title: string;
-	tagLine?: string;
-
-	image:
-		| {
-				name: string;
-				type: string;
-				path: string;
-		  }
-		| string;
+    id: number;
+    title: string;
+    image: string;
+}
+export interface IComment {
+    id: number;
+    comment: string;
+    author: {
+        name: string;
+        avatar: string;
+    };
 }
