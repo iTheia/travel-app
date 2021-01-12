@@ -1,0 +1,17 @@
+{
+    "name": "travel-app",
+    "version": "1.0.0",
+    "description": "App fullstack de turismo",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iTheia/travel-app.git"
+    },
+    "keywords": [],
+    "author": "Marlon Giovanni Martinez Herrera <martinez.1ded@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/iTheia/travel-app/issues"
+    },
+    "homepage": "https://github.com/iTheia/travel-app#readme"
+}
