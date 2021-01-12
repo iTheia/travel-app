@@ -1,0 +1,3 @@
+export const MIN_HEADER_HEIGHT = 65;
+export const MAX_HEADER_HEIGHT = 260;
+export const HEADER_DELTA = MAX_HEADER_HEIGHT - MIN_HEADER_HEIGHT;
